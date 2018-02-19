@@ -69,3 +69,36 @@ header h1 {
 #Rose{
 	background-color: #FF456A;
 }	
+
+.middle{
+	display: block;
+	position: absolute;
+	height:70%;
+	width:100%;
+	top: 20%;
+	
+}
+
+.liste{
+	display: block;
+	position: relative;
+	margin-top: 5%;
+	margin-left: 10%;
+	
+}
+
+.classes{
+	display: block;
+	position: relative;
+	background-color: grey;
+	width: 85%;
+	padding-bottom: 0.8%;
+	padding-top: 0.8%;
+	margin-bottom: 1%;
+	z-index: 1000;
+}
+
+.classes h2{
+	margin-left: 5%;
+	font-size: 200%;
+}

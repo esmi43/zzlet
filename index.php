@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="stylesheet.css">
         
         <!-- graphic cart -->
+		
+		<!-- MODIFIER L'URL -->
 
         <style>
             
@@ -31,7 +33,45 @@
         </header>
 
         <!-- Classes / Listes grace à requetes-->
+		<div class="middle">
+			<div class="liste">
+			
+				<?php 
+					try
+					{
+						$bdd = new PDO('mysql:host=localhost;dbname=zzlet;charset=utf8', 'root', '');
+					}
+					catch(Exception $e)
+					{
+							die('Erreur : '.$e->getMessage());
+					}
 
+					$reponse = $bdd->query('SELECT Name FROM classes');
+					
+					if ($donnees = $reponse->fetch())
+					{
+						do{
+							?>
+							<div class="classes"> 
+								<h2> <?php echo $donnees['Name']; ?> </h2> 
+							</div>
+						<?php
+						}while($donnees = $reponse->fetch());
+					}
+					else
+					{
+						?>
+							<div class="classes"> 
+								<h2> Aucune classe n'a été trouvée </h2> 
+							</div>
+						<?php
+					}
+
+					$reponse->closeCursor();
+				?>
+
+			</div>
+		</div>
 
         <footer>
             <p>Privacy terms: Later. &copy; Estelle MICHEL & Corentin PALISSON</p>
