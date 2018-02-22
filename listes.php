@@ -3,12 +3,14 @@
     <!--  -->
 
     <?php include("head.php"); ?>
+	
+		
 
     <?php include("header.php"); ?>
 
         <!-- Classes / Listes grace à requetes-->
 		<div class="middle">
-			<h2> Les classes </h2>
+			<h2> Les listes </h2>
 			<div class="liste">
 			
 				<?php 
@@ -21,16 +23,14 @@
 							die('Erreur : '.$e->getMessage());
 					}
 
-					$reponse = $bdd->query('SELECT Name,NOC FROM classes');
+					$reponse = $bdd->query('SELECT Name FROM listes WHERE NOC='.$_GET['NOC']);
 					
 					if ($donnees = $reponse->fetch())
 					{
 						do{
 							?>
 							<div class="classes"> 
-								<a class="choix" href="listes.php?NOC=<?php echo $donnees['NOC'];?>">
-									<h3> <?php echo $donnees['Name']; ?> </h3>
-								</a>
+								<h3> <?php echo $donnees['Name']; ?> </h3> 
 							</div>
 						<?php
 						}while($donnees = $reponse->fetch());
@@ -39,7 +39,7 @@
 					{
 						?>
 							<div class="classes"> 
-								<h3> Aucune classe n'a été trouvée </h3> 
+								<h3> Aucune liste n'a été trouvée </h3> 
 							</div>
 						<?php
 					}
@@ -51,9 +51,20 @@
 		</div>
 
     <?php include("footer.php"); ?>
-    <script type="text/javascript" src="affichage.js"> </script>
+	
+	
+    <script type="text/javascript" src="affichage.js"></script>
+	<script type="text/javascript">
+	<?php 
+		if (isset($_GET['color'])){
+			$color = $_GET['color'];
+		}
+	?>
+	var arg='<?php echo $color;?>';
+	console.log('<?php echo $_GET['color'];?>');
+	changecouleur(arg);
+	changelien(arg);
+	</script>
+	
 
 </html>
-
-
-<!--fr.html.net/tutorials/php/lesson19.php-->

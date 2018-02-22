@@ -98,7 +98,12 @@ header h1 {
 	z-index: 1000;
 }
 
-.classes h2{
+.classes h3{
 	margin-left: 5%;
 	font-size: 200%;
+}
+
+.middle h2{
+	position: relative;
+	text-align: center;
 }
