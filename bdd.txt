@@ -1,3 +1,0 @@
-wampp --> phpmyadmin
-xampp (et mysql ensuite)
-mysql (le dauphin) : https://dev.mysql.com/downloads/mysql/
