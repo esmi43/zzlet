@@ -18,6 +18,18 @@ var changecouleur = function(argument){
 	}
 }
 
+/*Affichage pop up de connexion*/
+
+function openmodal()
+{
+	document.getElementById("modal").style.top = "150px"; /*.style.display='block'*/
+}
+
+function CloseModal()
+{
+	document.getElementById("modal").style.top = "-300px";
+}
+
 var changelien= function(argument){
 	for (var i = 0; i < choix.length; i++)
 	{
