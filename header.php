@@ -1,17 +1,40 @@
-<body>
-	<header class="mustChangeColor">
-		<!-- TITRE -->
-		<h1> ZZedLet!</h1>
-		<!-- LOGIN -->
-		<div id="chosecolor">
-			<div class="color" id="Bleu" title="Change la couleur du site" data-couleur="#005DA3"></div>
-			<div class="color" id="Rose" title="Change la couleur du site" data-couleur="#FF456A"></div>
-		</div>
-          
-			<div id="lore"><a>
+<!DOCTYPE html>
+<html>
+   
+
+<?php include("head.php"); ?>
+    <head>
+        <title>ZZedlet</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="stylesheet.css">
+        
+        <!-- graphic cart -->
+		
+		<!-- MODIFIER L'URL -->
+
+        <style>
+            
+            
+        </style>
+
+    </head>
+
+        <header class="mustChangeColor">
+            <!-- TITRE -->
+             <h1> ZZedLet!</h1>
+            <!-- LOGIN -->
+			<div id="chosecolor">
+				<div class="color" id="Bleu" title="Change la couleur du site" data-couleur="#005DA3"></div>
+				<div class="color" id="Rose" title="Change la couleur du site" data-couleur="#FF456A"></div>
+			</div>
+			
+            <div id="lore"><a>
 				
 				<button id = "button-modal" onclick = "openmodal()" > Login </button>
 				</a>
+            <a> Register</a></div>
+			
 			 <div id = "modal">
 	
 				<form id="formulaire" method="post" action="formulaire.php">
@@ -34,7 +57,10 @@
 				</form>
 				<button id="close" onclick="CloseModal()"> X </button>
 			</div>  
-            <a> Register</a></div>
-    </header>
+			
+        </header>
+
 	
 <script type="text/javascript" src="affichage.js"> </script>
+
+</html>
