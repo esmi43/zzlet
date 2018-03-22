@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html>
+
    
 
-<?php include("head.php"); ?>
+
     <head>
         <title>ZZedlet</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="stylesheet.css">
+  
         
         <!-- graphic cart -->
 		
@@ -61,6 +59,5 @@
         </header>
 
 	
-<script type="text/javascript" src="affichage.js"> </script>
+<script type="text/javascript" src="affichage.js"> </script> 
 
-</html>
